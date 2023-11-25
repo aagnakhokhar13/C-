@@ -1,6 +1,7 @@
 #include<iostream>
 using namespace std;
-class A{
+class A  
+{
     public:
     void sum()
     {
@@ -10,7 +11,7 @@ class A{
     }
 };
 class B:public A
-    {
+{
     public:
     void circle(){
         int rad=5;
@@ -20,14 +21,15 @@ class B:public A
     }
 };
 class C
-    {
+{
     public:
     void data(){
        
         cout<<"Data is updated:-"<<endl;
     }
 };
-class D: public B,public C{
+class D: public B,public C
+{
     public:
     void sub(){
         int a=75;
