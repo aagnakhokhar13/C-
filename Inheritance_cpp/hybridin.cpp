@@ -2,13 +2,15 @@
 using namespace std;
 class A{
     public:
-    void sum(){
+    void sum()
+    {
         int a=55;
         int b=66;
         cout<<"SUM :-"<<a+b<<endl;
     }
 };
-class B:public A{
+class B:public A
+    {
     public:
     void circle(){
         int rad=5;
@@ -17,7 +19,8 @@ class B:public A{
         cout<<"Area of circle :-"<<pi*rad*rad<<endl;
     }
 };
-class C{
+class C
+    {
     public:
     void data(){
        
