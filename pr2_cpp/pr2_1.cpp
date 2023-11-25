@@ -1,54 +1,65 @@
 #include<iostream>
-using namespace std;
-class Distance{
+using namespace std
+class Distance {
     private:
     int feet;
-    int inches;
+    int inch;
+
     public:
-        
-        Distance():feet(0),inches(0){}
-            Distance(int ft,int in):feet(ft),inches(in){}
-                void readDistance()
-                {
-                    cout<<"Enter the feet:";
-                    cin >> feet;
-                     cout<<"Enter the inch:";
-                    cin >> inch;
+    Distance();
+    void getDist();
+    void showDist();
+    Distance addDist(Distance d2);
 
-                    void displayDistance() const
-                    {
-                        cout<<feet<< "feet" <<inches<< "inches";
-                    }
-                    Distance addDistance(const Distance& d1,const Distance& d2)const
-                    {
-                        Distance result;
-                        result.feet=d1.feet +d2.feet;
-                        result.inches=d1.inches +d2.inches;
-                      
-                      if(result >=12)
-                      {
-                        result.feet+= result.inches/12;
-                          result.inches %=12;
-                      }
+};
+Distance::Distance()
+{
+    feet=0;
+    inch=0;
+}
+void Distance::getDist()
+{
+   
+    cout<<"Enter the value  of feet:";
+    cin >>feet;
+     cout<<"Enter the value  of inch:";
+    cin >>inch;
 
+    inch = (inch>=12) ? 12:inch;
+}
+void Distance:: showDist()
+{
+    cout<< endl<<"\tfeet :"<< feet;
+      cout<< endl<<"\tinch :"<< inch;
+}
+Distance Distance::addDist(Distance d2)
+{
+    Distance temp;
 
-                    return result;
-                }
-            };
-            int main()
-            {
-                Distance distance1, distance2,sum;
+    temp.feet =feet +d2.feet;
+     temp.inch =inch +d2.inch;
+     if(temp.inch >=12)
+     {
+        temp.feet++;
+        temp.inch =12;
 
-                cout<<"Enter the first distance :"<<endl;
-                distance1.readDistance();
-                cout<<"Enter the second distance :"<<endl;
-                 distance2.readDistance();
+     }
+     return temp;
+}
+int main()
+{
+    Distance d1;
+    Distance d2;
+    Distance d3;
+    Distance d4;
 
-                 sum =sum.addDistance(distance1 , distance2);
+    cout<<"Enter the Distance d1 : "<<endl;
+   d1.getDist();
+    cout<<"Enter the Distance d2 : ";
+    d2.getDist();
 
-                 cout<<"sum of distances :";
-                 sum.displayDistance();
-                 cout<<endl;
-                
-            }
-        }
+    d3=d1.addDist(d2);
+    cout<< endl
+    << "Distance1:";
+    
+}
