@@ -60,7 +60,7 @@ int main()
 
     for (i = 0; i < n; i++) {
         cout << "Details of student " << (i + 1) << ":<<endl";
-        std[loop].putDetails();
+        std[i].putDetails();
     }
 
     return 0;
