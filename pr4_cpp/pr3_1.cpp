@@ -52,7 +52,7 @@ int main()
     cin >> n;
 
     for (i= 0; i < n; i++) {
-        cout << "Enter details of student " << loop + 1 << ":<<endl";
+        cout << "Enter details of student " << i + 1 << ":<<endl";
         std[i].getDetails();
     }
 
