@@ -46,20 +46,20 @@ void student::putDetails(void)
 int main()
 {
     student std[MAX];
-    int n, loop;
+    int n, i;
 
     cout << "Enter total number of students: ";
     cin >> n;
 
-    for (loop = 0; loop < n; loop++) {
+    for (i= 0; i < n; i++) {
         cout << "Enter details of student " << loop + 1 << ":<<endl";
-        std[loop].getDetails();
+        std[i].getDetails();
     }
 
     cout << endl;
 
-    for (loop = 0; loop < n; loop++) {
-        cout << "Details of student " << (loop + 1) << ":<<endl";
+    for (i = 0; i < n; i++) {
+        cout << "Details of student " << (i + 1) << ":<<endl";
         std[loop].putDetails();
     }
 
