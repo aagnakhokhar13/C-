@@ -50,7 +50,7 @@ class billing
                     cout<<"Discount:-"<<discount<<endl;
                     total = pen * qty;
                     cout<<"Total :-"<<total<<endl;
-                    finaltotal = total-(discount/100)+(tax/100);
+                    finaltotal = total-(total * discount/100)+(total * tax/100);
                     cout<<"finaltotal :-"<<finaltotal<<endl;
                     break;
                 }
@@ -101,7 +101,7 @@ class billing
                     cout<<"Discount:-"<<discount<<endl;
                     total = coffee * qty;
                     cout<<"Total :-"<<total<<endl;
-                    finaltotal = total-(discount/100)+(tax/100);
+                    finaltotal = total-(total * discount/100)+(total * tax/100);
                     cout<<"finaltotal :-"<<finaltotal<<endl;
                     break;
                 }
@@ -128,7 +128,7 @@ class billing
                     cout<<"Discount:-"<<discount<<endl;
                     total = tea * qty;
                     cout<<"Total :-"<<total<<endl;
-                    finaltotal = total-(discount/100)+(tax/100);
+                    finaltotal = total-(total * discount/100)+(total * tax/100);
                     cout<<"finaltotal :-"<<finaltotal<<endl;
                     
                       }
